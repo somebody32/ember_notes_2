@@ -1,6 +1,6 @@
 var Note = DS.Model.extend({
-  updated: DS.attr('date'),
-  text: DS.attr('string')
+  updated: DS.attr('date', {defaultValue: new Date()}),
+  text: DS.attr('string', {defaultValue: "new note"})
 });
 
 Note.reopenClass({
